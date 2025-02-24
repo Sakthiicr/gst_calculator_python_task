@@ -1,0 +1,52 @@
+# print("*******WELCOME TO A2B RESTAURANT*********")
+# print("*******PRESS 1 FOR MENU*********")
+# print("*******PRESS 2 FOR ORDER*********")
+# print("*******PRESS 3 FOR BILL*********")
+# print("*******IF THEY PRESS 1,SHOW THE ITEMS IN MENU LIKE,1.IDLY,2.PAROTTA,3.VADA,4.PONGAL ***********")
+# print("*******IF THEY PRESS 2,ASK FOR THE ITEMS THEY WANT TO ORDER***********")
+# print("*******IF THEY PRESS 3,SHOW THE BILL***********")
+
+# name=input("ENTER YOUR NAME: ")
+# ph_no=int(input("ENTER YOUR PH_NO: "))
+# to_order=int(input("WHAT YOU WANT TO ORDER IN MENU: "))
+# print(f"your items in order are {to_order}")
+
+
+# name=input("enter your name: ")
+# age=int(input("enter your age: "))
+# dob=input("Enter your date of birth (DD.MM.YYYY): ")
+# qualification=input("enter your qualification: ")
+# gender=input("MALE OR FEMALE: ")
+# parents_name=input("ENTER THE PARENTS NAME")
+# spouse_name=input("ENTER THE SPOUSE NAME")
+# list_of_movies=input("ENTER THE LIST OF MOVIES")
+# description=input("ENTER THE DESCRIPTION")
+# how_many_movies=int(input("ENTER THE NUMBER OF MOVIES YOU WANT TO WATCH: "))
+
+# print("\n--- Details Entered ---")
+
+# print("Name:", name)
+# print("Age:", age)
+# print("Date of Birth:", dob)
+# print("Qualification:", qualification)
+# print("Gender:", gender)
+# print("parents_name: ",parents_name)
+# print("spouse_name: ",spouse_name)
+# print("list_of_movies: ",list_of_movies)
+# print("description: ",description)
+# print("how_many_movies: ",how_many_movies)
+
+
+print("*****POORVIKA******")
+print("*****1.SAMSUNG AND COST PRICE IS 10000******")
+print("*****2.ONEPLUS AND COST PRICE IS 15000******")
+print("*****3.REALME AND COST PRICE IS 12000******")
+print("*****4.REDMI AND COST PRICE IS 8000******")
+cost_price=int(input("ENTER UR BUDGET:  "))
+gst_price=float(input("enter ur store gst_price: "))
+gst_amount=(cost_price * gst_price)/100
+print("gst_amount: ",gst_amount)
+final_price= cost_price + gst_amount
+print("final_price: ",final_price)
+print(f"GST_PRICE: {gst_amount}")
+print(f"FINAL_PRICE AFTER GST INCLUDED: {final_price}")
