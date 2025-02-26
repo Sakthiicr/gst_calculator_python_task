@@ -1,0 +1,50 @@
+store_num = []
+
+
+store_num.append(10)
+store_num.append(20)
+store_num.append(30)
+print("After append:", store_num)
+
+
+store_num.extend([40, 50])
+print("After extend:", store_num)
+
+
+store_num.insert(2, 25)  
+print("After insert:", store_num)
+
+
+store_num.remove(20)
+print("After remove (20):", store_num)
+
+
+popped_item = store_num.pop()
+print("After pop:", store_num)
+print("Popped item:", popped_item)
+
+
+store_num.clear()
+print("After clear:", store_num)
+
+
+store_num = [10, 20, 30, 40, 50]
+index_of_30 = store_num.index(30)
+print("Index of 30:", index_of_30)
+
+
+count_of_20 = store_num.count(20)
+print("Count of 20:", count_of_20)
+
+
+store_num.sort()  
+print("After sort:", store_num)
+
+
+store_num.reverse()  
+print("After reverse:", store_num)
+
+
+copied_list = store_num.copy()
+print("Copied list:", copied_list)
+
