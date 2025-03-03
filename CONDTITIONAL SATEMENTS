@@ -1,0 +1,92 @@
+#if-else statement:
+
+print("**********WELCOME TO V SQUARE MALL***********")
+print("1. Electronics")
+print("2. Fashion")
+print("3.theaters")
+print("4. Food Court")
+print("5. Exit")
+choice = int(input("Enter your choice: "))
+if choice == 1:
+    print("You have chosen Electronics")
+    print("1.Trimmer")
+    print("2. Hair Dryer")
+    print("3.mobile phone")
+    electronics={"trimmer":2000,"Hair Dryer":1500,"Mobile Phone":10000}
+    what_u_want=int(input("What Items u want Electronics Section:"))
+    if what_u_want in electronics:
+        print("You have chosen",what_u_want,"price is",electronics[what_u_want])
+        no_of_items=int(input("How many items u want:"))
+        total_amount=electronics[what_u_want]*no_of_items
+        #gst_calculation
+        gst_rate=5
+        gst_amount=total_amount*gst_rate/100
+        final_price=total_amount+gst_amount
+        print("Final Price is",final_price)
+        
+    else:
+        print("You Chosen Wrong_electronics:")
+elif choice == 2:
+    print("You have chosen Fashion")
+    print("1.T-SHIRT")
+    print("2.SHIRTS")
+    print("3.TRACKS")
+    clothes={"t-shirt":200,"Shirts":1500,"Tracks":10000}
+    what_u_want=int(input("What Items u want Fashion Section:"))
+    if what_u_want in  clothes:
+        print("You have chosen",what_u_want,"price is", clothes[what_u_want])
+        no_of_items=int(input("How many items u want:"))
+        total_amount= clothes[what_u_want]*no_of_items
+        #gst_calculation
+        gst_rate=5
+        gst_amount=total_amount*gst_rate/100
+        final_price=total_amount+gst_amount
+        print("Final Price is",final_price)
+        
+    else:
+        print("You Chosen Wrong_ clothes:")
+elif choice == 3:
+    print("You have chosen Theaters")
+    print("1.SCREEN 1 FOR PUSHPA 2")
+    print("2.SCREEN 2 FOR GOOD BAD UGLY")
+    print("3.SCREEN 3 FOR BAHUBALI 2")
+    SHOWS={"SCREEN 1":200,"SCREEN 2":150,"SCREEN 3":180}
+    what_u_want=int(input("What SCREEN u want TO WATCH MOVIE:"))
+    if what_u_want in  SHOWS:
+        print("You have chosen",what_u_want,"price is", SHOWS[what_u_want])
+        no_of_items=int(input("How many items u want:"))
+        total_amount= SHOWS[what_u_want]*no_of_items
+        #gst_calculation
+        gst_rate=5
+        gst_amount=total_amount*gst_rate/100
+        final_price=total_amount+gst_amount
+        print("Final Price is",final_price)
+        
+    else:
+        print("You Chosen WRONG_SHOWS:")
+elif choice == 4:
+    print("You have chosen Food Court")
+    print("1.VEG")
+    print("2.NON-VEG")
+    print("3.SPECIAL")
+    FOOD={"VEG":100,"NON-VEG":150,"SPECIAL":200}
+    what_u_want=int(input("What FOOD u want TO EAT:"))
+    if what_u_want in  FOOD:
+        print("You have chosen",what_u_want,"price is", FOOD[what_u_want])
+        no_of_items=int(input("How many items u want:"))
+        total_amount= FOOD[what_u_want]*no_of_items
+        #gst_calculation
+        gst_rate=5
+        gst_amount=total_amount*gst_rate/100
+        final_price=total_amount+gst_amount
+        print("Final Price is",final_price)
+    else:
+        print("You Chosen WRONG_ITEMS:")
+        
+                                                             
+elif choice == 5:
+    print("You have chosen Exit")
+    print("ASK SECURITY FOR EXIT THEY WILL GUIDE YOU")
+else:
+    print("Wrongly entered your choice")
+    print("Thank you for visiting V Square Mall")
