@@ -1,0 +1,22 @@
+#count to 10
+count = 1
+while count <= 10:
+    print(count)
+    count += 1
+#sum of numbers
+sum = 0
+number = 1
+while number <= 100:
+    sum += number
+    number += 1
+print("Sum:", sum)
+#user input until zero
+number = None
+while number != 0:
+    number = int(input("Enter a number (0 to exit): "))
+#print even numbers
+number = 1
+while number <= 20:
+    if number % 2 == 0:
+        print(number)
+    number += 1
