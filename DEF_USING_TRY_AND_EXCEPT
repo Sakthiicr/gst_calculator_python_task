@@ -1,0 +1,40 @@
+def breakfast():
+    return {"dhosa": 60, "idly": 20}
+
+def lunch():
+    return {"meals": 120, "veg_biriyani": 150}
+
+def saravana_bhava():
+    try:
+        print("You want breakfast or lunch, sir?")
+        your_order = input("Tell me your order sir: ").strip().lower()
+
+        if your_order == "breakfast":
+            print("YOU HAVE SELECTED BREAKFAST!")
+            print("AVAILABLE ITEMS: IDLY OR DHOSA!")
+            menu = breakfast()
+        elif your_order == "lunch":
+            print("YOU HAVE SELECTED LUNCH!")
+            print("AVAILABLE ITEMS: MEALS OR VEG BIRIYANI!")
+            menu = lunch()
+        else:
+            print("Invalid choice. Please select either 'breakfast' or 'lunch'.")
+            return
+
+        choose_food = input("Enter your food item: ").strip().lower()
+        if choose_food in menu:
+            try:
+                quantity = int(input(f"Enter how many {choose_food}(s) you want: "))
+                if quantity < 1:
+                    raise ValueError("Quantity must be at least 1.")
+                total = menu[choose_food] * quantity
+                print(f"Your bill is ₹{total}")
+            except ValueError as ve:
+                print(f"Invalid quantity: {ve}")
+        else:
+            print("Sorry, that item is not available.")
+
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+saravana_bhava()
