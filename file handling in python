@@ -1,0 +1,48 @@
+#file handling concept
+def food_menu():
+    try:
+        f=open("food_menus.txt","r")
+        outside_file=f.read()
+        print(outside_file)
+        
+        
+        other_food=(outside_file).split(",")
+        print(other_food)
+        
+        VEG=100
+        NON_VEG=150
+        SPECIAL=350
+        
+        your_order=input("Enter Your Order: ")
+        if your_order in other_food:
+            print("Your order is available in the menu")
+            how_many=int(input("How Many Orders You Want: "))
+            if your_order=="VEG":
+                total=VEG*how_many
+                print(f"Your bill is ₹{total}")
+                f=open("bill.txt","w")
+                f.write(f"your total bill is {total}")
+                print("bill generated sucessfully")
+            elif your_order=="NON_VEG":
+                total=NON_VEG*how_many
+                print(f"Your bill is ₹{total}")
+                f=open("bill.txt","w")
+                f.write(f"your total bill is {total}")
+                print("bill generated sucessfully")
+            
+            elif your_order=="SPECIAL":
+                total=SPECIAL*how_many
+                print(f"Your bill is ₹{total}")
+                f=open("bill.txt","w")
+                f.write(f"your total bill is {total}")
+                print("bill generated sucessfully")
+            
+            else:
+                print("Sorry, that item is not available.")
+                
+        else:
+            print("Sorry, that item is not available in the menu")
+    
+    except:
+        print("File not found")
+food_menu()
