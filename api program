@@ -1,0 +1,24 @@
+import requests
+
+com_ing="http://demo1724926.mockable.io/march20_data"
+
+response=requests.get(com_ing) 
+print(response.status_code)
+
+if response.status_code == 200:
+    data=response.json()
+    print(data)
+    
+    tamil_score = int(data["tamil"])
+    english_score = int(data["english"])
+    maths_score = int(data["maths"])
+    science_score = int(data["science"])
+    social_score = int(data["social"])
+    
+    total_score = tamil_score + english_score + maths_score + science_score + social_score
+    average_score = total_score / 5
+    print("Average Score:", average_score)
+    print("Total Score:", total_score)
+else:
+    print("Response Is Not Available..")
+    
